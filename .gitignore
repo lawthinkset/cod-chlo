@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Media outputs & temporary files
+temp_*
+raw_record/
+reels/
+*.mp4
+*.webm
+*.mp3
+*.jpg
+*.png
+*.vtt
+
+# Environment & Secrets
+.env

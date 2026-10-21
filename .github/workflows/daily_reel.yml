@@ -1,0 +1,53 @@
+name: Daily Code Reel Generator
+
+on:
+  schedule:
+    # Runs every day at 09:00 UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Programming language'
+        required: false
+        default: 'python'
+      mode:
+        description: 'Content mode (trick, puzzle, auto)'
+        required: false
+        default: 'auto'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: Run Pipeline Round
+        env:
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python daily_pipeline.py --lang ${{ github.event.inputs.language || 'python' }} --mode ${{ github.event.inputs.mode || 'auto' }}
+
+      - name: Upload Generated Reel Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-reel-${{ github.run_id }}
+          path: reels/
+          retention-days: 7

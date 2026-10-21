@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2026-10-21T12:32:05.292076",
+    "topic_id": "python_list_comp_for_map",
+    "title": "Stop Using Map Like This! 🚀",
+    "language": "python",
+    "video_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_123121_python_list_comp_for_map.mp4",
+    "caption_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_123121_python_list_comp_for_map_caption.txt"
+  },
+  {
+    "timestamp": "2026-10-21T13:01:54.196758",
+    "topic_id": "python_dict_get_default",
+    "title": "Avoid KeyError in Python Dictionaries!",
+    "language": "python",
+    "voice": "adam",
+    "video_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_130103_python_dict_get_default.mp4",
+    "caption_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_130103_python_dict_get_default_caption.txt"
+  },
+  {
+    "timestamp": "2026-10-21T14:07:11.337463",
+    "topic_id": "python_fstr_unpack",
+    "title": "Unpack Dicts Faster! 🚀",
+    "language": "python",
+    "voice": "adam",
+    "video_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_140627_python_fstr_unpack.mp4",
+    "caption_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_140627_python_fstr_unpack_caption.txt"
+  },
+  {
+    "timestamp": "2026-10-21T14:45:36.870293",
+    "topic_id": "python_pathlib_resolve",
+    "title": "Simplify Path Resolution",
+    "language": "python",
+    "voice": "adam",
+    "video_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_144447_python_pathlib_resolve.mp4",
+    "caption_path": "C:\\Users\\kreg9\\code_video_generator\\reels\\reel_20261021_144447_python_pathlib_resolve_caption.txt"
+  },
+  {
+    "timestamp": "2026-10-21T17:28:48.444764",
+    "topic_id": "mutable_default_arg_trap",
+    "title": "Python's Hidden Mutable Default Trap! 🐍",
+    "category": "puzzle",
+    "language": "python",
+    "voice": "adam",
+    "video_path": "C:\\Users\\kreg9\\cod-chlo\\reels\\reel_20261021_172758_mutable_default_arg_trap.mp4",
+    "caption_path": "C:\\Users\\kreg9\\cod-chlo\\reels\\reel_20261021_172758_mutable_default_arg_trap_caption.txt"
+  }
+]
